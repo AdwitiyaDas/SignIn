@@ -1,0 +1,80 @@
+<html>
+<head>
+<style>
+	#container
+	{
+		margin-left:35%;
+		margin-top:5%;
+		padding:30px;
+		width:350px;
+		height:450px;
+		background-color:#fff;
+		
+	}
+	#username
+	{
+		padding:10px;
+		width:100%;
+	}
+	#password
+	{
+		padding:10px;
+		width:100%;
+	}
+	
+	.logo
+	{
+		position:relative;
+		margin-left:120px;
+		margin-top:20px;
+	}
+	.button
+	{
+		background-color:#6CC;
+		position:relative;
+		margin-left:90px;
+		padding:8px;
+		width:50%;
+		
+	}
+	body
+	{
+		background-color:#6CC;
+	}
+</style>
+<script type="text/javascript">
+	function display()
+	{
+		var uname=document.getElementById('username').value;
+		var pword=document.getElementById('password').value;
+		if(uname=="" && pword!="")
+		{
+			alert("Please enter username");
+		}
+		else if(pword=="" && uname!="")
+		{
+			alert("Please enter password");
+		}
+		else if(pword=="" && uname=="")
+		{
+			alert("Please enter username and password");
+		}
+		else
+		{
+			alert("Hello "+uname);
+		}
+	}
+</script>
+</head>
+<body>
+<div id="container">
+	<img class="logo" src="Images\twitter.jpg" height="100" width="100"/>  
+	<h1>Sign In to your Account</h1>
+	<label>Username</label></br></br>
+	<input type="text" id="username" size="30" maxlength="30" required="required" placeholder="Enter username"/></br></br>
+	<label>Password</label></br></br>
+	<input type="password" id="password" size="30" maxlength="30" required="required" placeholder="Enter password"/></br></br>
+	<input type="button" class="button" value="Sign In" onclick="display()"/>
+</div>
+</body>
+</html>
